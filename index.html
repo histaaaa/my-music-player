@@ -17,138 +17,118 @@
             width: 100%;
             height: 100%;
             position: relative;
-            background: #495059;
             transform: rotate(90deg);
             transform-origin: top left;
             overflow: hidden;
         }
 
-        img {
-            width: 683.28px;
-            height: 689.04px;
+        /* Image */
+        .icon {
             position: absolute;
-            left: 302.60px;
-            top: 561.64px;
+            top: -121.64px;
+            left: -653.4px;
+            width: 689px;
+            height: 683.3px;
+            object-fit: contain;
             transform: rotate(-90deg);
-            transform-origin: top left;
         }
 
-        .text-blurry, .text-lofi, .border-blurry, .text-resonate, 
-        .button-dance, .text-close-eyes, .date, .text-dance, 
-        .button-play, .button-pause, .button-stop, 
-        .inner-play, .inner-pause, .inner-stop {
+        /* Text */
+        .blurry {
             position: absolute;
+            top: 896.02px;
+            left: 252.89px;
+            display: inline-block;
+            width: 104px;
+            text-shadow: 0.3px 0 0 #fff, 0 0.3px 0 #fff, -0.3px 0 0 #fff, 0 -0.3px 0 #fff;
             transform: rotate(-90deg);
-            transform-origin: top left;
-            color: #E4E1D8;
-            font-size: 24px;
-            font-family: 'Adobe Song Std';
-            font-weight: 300;
-            word-wrap: break-word;
+            transform-origin: 0 0;
         }
 
-        .text-blurry {
-            width: 48px;
-            left: 59.98px;
-            top: 300.89px;
+        .lo-fi {
+            position: absolute;
+            top: 382.86px;
+            left: 168.28px;
+            font-family: Kodchasan;
+            text-align: center;
+            display: inline-block;
+            width: 104px;
+            transform: rotate(-90deg);
+            transform-origin: 0 0;
         }
 
-        .text-lofi {
-            width: 31px;
-            left: 29.26px;
-            top: 192.78px;
+        .you-resonate-most {
+            position: absolute;
+            top: 926.66px;
+            left: 212.87px;
+            text-shadow: 0.3px 0 0 #fff, 0 0.3px 0 #fff, -0.3px 0 0 #fff, 0 -0.3px 0 #fff;
+            transform: rotate(-90deg);
+            transform-origin: 0 0;
         }
 
-        .border-blurry {
-            width: 34.05px;
-            height: 121.13px;
-            left: 29.34px;
-            top: 294.92px;
-            border-radius: 40px;
-            border: 1px #E4E1D8 solid;
+        .now-close-you {
+            position: absolute;
+            top: 926.66px;
+            left: 303.92px;
+            text-shadow: 0.3px 0 0 #fff, 0 0.3px 0 #fff, -0.3px 0 0 #fff, 0 -0.3px 0 #fff;
+            transform: rotate(-90deg);
+            transform-origin: 0 0;
         }
 
-        .text-resonate {
-            left: 29.34px;
-            top: 260.87px;
-        }
-
-        .button-dance {
-            width: 34.05px;
-            height: 121.13px;
-            left: 29.34px;
-            top: 385.97px;
-            background: #D9D9D9;
-            border-radius: 40px;
-            border: 1px #E4E1D8 solid;
-        }
-
-        .text-close-eyes {
-            left: 29.34px;
-            top: 351.92px;
-        }
-
-        .date {
-            width: 76px;
-            height: 407px;
-            left: 29.34px;
-            top: 108.87px;
+        .div {
+            position: absolute;
+            top: 926.66px;
+            left: 32.87px;
             font-size: 36px;
             font-family: 'Poiret One';
-            font-weight: 400;
-            word-wrap: break-word;
+            display: inline-block;
+            width: 407px;
+            height: 76px;
+            transform: rotate(-90deg);
+            transform-origin: 0 0;
         }
 
-        .text-dance {
-            width: 48px;
-            left: 59.98px;
-            top: 391.94px;
+        .dance {
+            position: absolute;
+            top: 896.02px;
+            left: 343.94px;
             color: #495059;
+            display: inline-block;
+            width: 104px;
+            text-shadow: 0.3px 0 0 #495059, 0 0.3px 0 #495059, -0.3px 0 0 #495059, 0 -0.3px 0 #495059;
+            transform: rotate(-90deg);
+            transform-origin: 0 0;
         }
 
-        .button-play, .button-pause, .button-stop {
-            width: 47.19px;
-            height: 75.19px;
-            background: #E4E1D8;
-            border-radius: 5px;
+        /* Audio control buttons */
+        .iphone-16-pro-max-10-child1, .iphone-16-pro-max-10-child, .iphone-16-pro-max-10-inner {
+            position: absolute;
+            top: 927.74px;
+            left: 161.91px;
+            border-radius: 6px;
+            background-color: #d9d9d9;
+            width: 267.4px;
+            height: 5.4px;
+            transform: rotate(-90deg);
+            transform-origin: 0 0;
         }
 
-        .button-play {
-            left: 28.26px;
-            top: 141.69px;
+        .icon-media-stop, .icon-media-pause, .icon-media-play {
+            position: absolute;
+            height: 2.69%;
+            width: 5.84%;
+            top: 11.13%;
+            right: 255.85%;
+            bottom: 86.18%;
+            left: -161.69%;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: contain;
+            transform: rotate(-90deg);
         }
 
-        .button-pause {
-            left: 124.36px;
-            top: 141.69px;
-        }
-
-        .button-stop {
-            left: 220.46px;
-            top: 141.69px;
-        }
-
-        .inner-play, .inner-pause, .inner-stop {
-            width: 25.68px;
-            height: 25.68px;
-            background: #495059;
-        }
-
-        .inner-play {
-            left: 56.77px;
-            top: 132.12px;
-        }
-
-        .inner-pause {
-            left: 149.78px;
-            top: 132.12px;
-        }
-
-        .inner-stop {
-            left: 244.56px;
-            top: 132.12px;
-        }
-
+        /* Progress bar */
         .progress-bar {
             position: absolute;
             width: 100%;
@@ -168,19 +148,20 @@
 </head>
 <body>
     <div class="container">
-        <img src="CassetteImage.png" alt="Cassette Image" />
-        <div class="text-blurry">Blurry</div>
-        <div class="text-lofi">Lo-fi</div>
-        <div class="border-blurry"></div>
-        <div class="text-resonate">You resonate most with...</div>
-        <div class="button-dance"></div>
-        <div class="text-close-eyes">Now close your eyes, and just...</div>
-        <div class="date">2025-03-25</div>
-        <div class="text-dance">Dance</div>
-        <div class="button-play" onclick="playMusic()">Play</div>
-        <div class="button-stop" onclick="stopMusic()">Stop</div>
-        <div class="button-pause" onclick="pauseMusic()">Pause</div>
+        <img src="CassetteImage.png" alt="Cassette Image" class="icon" />
+        <div class="blurry">Blurry</div>
+        <div class="lo-fi">Lo-fi</div>
+        <div class="you-resonate-most">You resonate most with...</div>
+        <div class="now-close-you">Now close your eyes, and just...</div>
+        <div class="div">2025-03-25</div>
+        <div class="dance">Dance</div>
 
+        <!-- Audio Control Buttons -->
+        <div class="iphone-16-pro-max-10-child1" onclick="playMusic()">Play</div>
+        <div class="iphone-16-pro-max-10-child" onclick="stopMusic()">Stop</div>
+        <div class="iphone-16-pro-max-10-inner" onclick="pauseMusic()">Pause</div>
+
+        <!-- Progress Bar -->
         <div class="progress-bar">
             <div class="progress-bar-inner" id="progressBar"></div>
         </div>
