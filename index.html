@@ -26,8 +26,8 @@
         }
 
         img {
-            width: 80%;
-            max-width: 500px; /* 确保图片适应 */
+            width: 90%; /* Adjusted for responsive design */
+            max-width: 500px;
             height: auto;
             margin-bottom: 20px;
         }
@@ -46,11 +46,34 @@
             color: #E4E1D8;
         }
 
-        /* 按钮样式 */
+        /* Progress bar */
+        .progress-container {
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #D9D9D9;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .progress-bar-inner {
+            height: 100%;
+            width: 0%; /* Initially set to 0% */
+            background: #E4E1D8;
+            border-radius: 4px;
+        }
+
+        /* Button styles */
         .button-dance, .button-play, .button-pause, .button-stop {
             display: inline-block;
             background: #D9D9D9;
-            border-radius: 40px;
+            border-radius: 20px;
             border: 1px solid #E4E1D8;
             padding: 15px 30px;
             margin: 10px;
@@ -70,15 +93,7 @@
             background-color: #E4E1D8;
         }
 
-        /* 音频控制按钮内图标 */
-        .inner-play, .inner-pause, .inner-stop {
-            width: 25px;
-            height: 25px;
-            background: #495059;
-            margin: 0 auto;
-        }
-
-        /* 响应式设计 */
+        /* For responsiveness */
         @media (max-width: 600px) {
             img {
                 width: 90%;
@@ -90,6 +105,10 @@
 
             .text-lofi, .text-blurry, .text-resonate, .text-close-eyes, .text-dance {
                 font-size: 20px;
+            }
+
+            .button-dance, .button-play, .button-pause, .button-stop {
+                width: 60%;
             }
         }
     </style>
@@ -105,21 +124,29 @@
         <div class="button-dance">Dance</div>
         <div class="text-close-eyes">Now close your eyes, and just...</div>
 
-        <!-- 音频控制按钮 -->
+        <!-- Audio Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-bar-inner" id="progressBar"></div>
+            </div>
+        </div>
+
+        <!-- Control Buttons -->
         <div class="button-play" onclick="playMusic()">Play</div>
         <div class="button-pause" onclick="pauseMusic()">Pause</div>
         <div class="button-stop" onclick="stopMusic()">Stop</div>
 
-        <!-- 音频播放器 -->
         <audio id="audioPlayer" src="generated_audio_20250327_171243.mp3"></audio>
     </div>
 
     <script>
         const audioPlayer = document.getElementById('audioPlayer');
+        const progressBar = document.getElementById('progressBar');
 
         // 播放音乐
         function playMusic() {
             audioPlayer.play();
+            updateProgressBar();
         }
 
         // 暂停音乐
@@ -130,7 +157,16 @@
         // 停止音乐
         function stopMusic() {
             audioPlayer.pause();
-            audioPlayer.currentTime = 0;  // 从头开始
+            audioPlayer.currentTime = 0;
+            progressBar.style.width = '0%';  // Reset progress bar
+        }
+
+        // 更新进度条
+        function updateProgressBar() {
+            setInterval(() => {
+                const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                progressBar.style.width = progress + '%';
+            }, 1000);
         }
     </script>
 </body>
