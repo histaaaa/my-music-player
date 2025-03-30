@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐播放器</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #4a4f59;
+            color: #eaeaea;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .buttons {
+            margin: 20px 0;
+        }
+        button {
+            background-color: #eaeaea;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .cassette {
+            width: 300px;
+            height: 150px;
+            background-image: url('C:/Users/lenovo/Desktop/iPhone 16 Pro Max - 10.png');
+            background-size: cover;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="date">2025-03-25</div>
+        <div class="buttons">
+            <button onclick="playMusic()">▶️</button>
+            <button onclick="pauseMusic()">⏸️</button>
+            <button onclick="stopMusic()">⏹️</button>
+        </div>
+        <div class="cassette"></div>
+        <div class="genre">Lo-fi</div>
+        <div class="resonate">You resonate most with... <button>Blurry</button></div>
+        <div class="action">Now close your eyes, and just... <button>Dance</button></div>
+    </div>
+
+    <audio id="audioPlayer" src="C:\Users\lenovo\Desktop\suno api test\generated_audio_20250327_171243.mp3"></audio>
+
+    <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        function playMusic() {
+            audioPlayer.play();
+        }
+
+        function pauseMusic() {
+            audioPlayer.pause();
+        }
+
+        function stopMusic() {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+        }
+    </script>
+</body>
+</html> 
