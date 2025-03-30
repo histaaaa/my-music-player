@@ -7,17 +7,22 @@
     <style>
         body {
             margin: 0;
-            overflow: hidden;
+            padding: 0;
             background: #495059;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
         }
+
         .container {
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             position: relative;
+            background: #495059;
             transform: rotate(90deg);
             transform-origin: top left;
-            background: #495059;
+            overflow: hidden;
         }
+
         img {
             width: 683.28px;
             height: 689.04px;
@@ -27,33 +32,33 @@
             transform: rotate(-90deg);
             transform-origin: top left;
         }
+
         .text-blurry, .text-lofi, .border-blurry, .text-resonate, 
         .button-dance, .text-close-eyes, .date, .text-dance, 
         .button-play, .button-pause, .button-stop, 
-        .inner-play, .inner-pause, .inner-stop, .progress-bar, .progress-thumb {
+        .inner-play, .inner-pause, .inner-stop {
             position: absolute;
             transform: rotate(-90deg);
             transform-origin: top left;
-        }
-        .text-blurry {
-            width: 48px;
-            left: 59.98px;
-            top: 300.89px;
             color: #E4E1D8;
             font-size: 24px;
             font-family: 'Adobe Song Std';
             font-weight: 300;
+            word-wrap: break-word;
         }
+
+        .text-blurry {
+            width: 48px;
+            left: 59.98px;
+            top: 300.89px;
+        }
+
         .text-lofi {
             width: 31px;
-            left: 573.14px;
-            top: 199.28px;
-            text-align: center;
-            color: #E4E1D8;
-            font-size: 24px;
-            font-family: 'Kodchasan';
-            font-weight: 400;
+            left: 29.26px;
+            top: 192.78px;
         }
+
         .border-blurry {
             width: 34.05px;
             height: 121.13px;
@@ -62,14 +67,12 @@
             border-radius: 40px;
             border: 1px #E4E1D8 solid;
         }
+
         .text-resonate {
             left: 29.34px;
             top: 260.87px;
-            color: #E4E1D8;
-            font-size: 24px;
-            font-family: 'Adobe Song Std';
-            font-weight: 300;
         }
+
         .button-dance {
             width: 34.05px;
             height: 121.13px;
@@ -79,85 +82,87 @@
             border-radius: 40px;
             border: 1px #E4E1D8 solid;
         }
+
         .text-close-eyes {
             left: 29.34px;
             top: 351.92px;
-            color: #E4E1D8;
-            font-size: 24px;
-            font-family: 'Adobe Song Std';
-            font-weight: 300;
         }
+
         .date {
             width: 76px;
             height: 407px;
             left: 29.34px;
             top: 108.87px;
-            color: #E4E1D8;
             font-size: 36px;
             font-family: 'Poiret One';
             font-weight: 400;
+            word-wrap: break-word;
         }
+
         .text-dance {
             width: 48px;
             left: 59.98px;
             top: 391.94px;
             color: #495059;
-            font-size: 24px;
-            font-family: 'Adobe Song Std';
-            font-weight: 300;
         }
+
         .button-play, .button-pause, .button-stop {
             width: 47.19px;
             height: 75.19px;
             background: #E4E1D8;
             border-radius: 5px;
-            cursor: pointer;
         }
+
         .button-play {
             left: 28.26px;
             top: 141.69px;
         }
+
         .button-pause {
             left: 124.36px;
             top: 141.69px;
         }
+
         .button-stop {
             left: 220.46px;
             top: 141.69px;
         }
+
         .inner-play, .inner-pause, .inner-stop {
             width: 25.68px;
             height: 25.68px;
             background: #495059;
         }
+
         .inner-play {
             left: 56.77px;
             top: 132.12px;
         }
+
         .inner-pause {
             left: 149.78px;
             top: 132.12px;
         }
+
         .inner-stop {
             left: 244.56px;
             top: 132.12px;
         }
+
         .progress-bar {
-            width: 5.37px;
-            height: 267.38px;
-            left: 28.26px;
-            top: 167.28px;
-            background: #D9D9D9;
-            border-radius: 6px;
+            position: absolute;
+            width: 100%;
+            height: 8px;
+            top: 450px;
+            background-color: #D9D9D9;
+            border-radius: 5px;
         }
-        .progress-thumb {
-            width: 13.90px;
-            height: 13.90px;
-            left: 42.87px;
-            top: 171.55px;
-            background: #849472;
-            border-radius: 9999px;
-            cursor: pointer;
+
+        .progress-bar-inner {
+            width: 0%;
+            height: 100%;
+            background-color: #E4E1D8;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -172,25 +177,24 @@
         <div class="text-close-eyes">Now close your eyes, and just...</div>
         <div class="date">2025-03-25</div>
         <div class="text-dance">Dance</div>
-        <div class="button-play" onclick="playMusic()"></div>
-        <div class="button-pause" onclick="pauseMusic()"></div>
-        <div class="button-stop" onclick="stopMusic()"></div>
-        <div class="inner-play"></div>
-        <div class="inner-pause"></div>
-        <div class="inner-stop"></div>
-        <div class="progress-bar"></div>
-        <div class="progress-thumb"></div>
-    </div>
+        <div class="button-play" onclick="playMusic()">Play</div>
+        <div class="button-stop" onclick="stopMusic()">Stop</div>
+        <div class="button-pause" onclick="pauseMusic()">Pause</div>
 
-    <audio id="audioPlayer" src="generated_audio_20250327_171243.mp3"></audio>
+        <div class="progress-bar">
+            <div class="progress-bar-inner" id="progressBar"></div>
+        </div>
+
+        <audio id="audioPlayer" src="generated_audio_20250327_171243.mp3"></audio>
+    </div>
 
     <script>
         const audioPlayer = document.getElementById('audioPlayer');
-        const progressBar = document.querySelector('.progress-bar');
-        const progressThumb = document.querySelector('.progress-thumb');
+        const progressBar = document.getElementById('progressBar');
 
         function playMusic() {
             audioPlayer.play();
+            updateProgressBar();
         }
 
         function pauseMusic() {
@@ -200,19 +204,15 @@
         function stopMusic() {
             audioPlayer.pause();
             audioPlayer.currentTime = 0;
+            progressBar.style.width = '0%';  // Reset progress bar
         }
 
-        audioPlayer.addEventListener('timeupdate', () => {
-            const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-            progressThumb.style.top = `${171.55 + (progress * 2.6738)}px`;
-        });
-
-        progressBar.addEventListener('click', (e) => {
-            const rect = progressBar.getBoundingClientRect();
-            const offsetY = e.clientY - rect.top;
-            const newTime = (offsetY / rect.height) * audioPlayer.duration;
-            audioPlayer.currentTime = newTime;
-        });
+        function updateProgressBar() {
+            setInterval(() => {
+                const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                progressBar.style.width = progress + '%';
+            }, 1000);
+        }
     </script>
 </body>
-</html> 
+</html>
