@@ -7,158 +7,146 @@
     <style>
         body {
             margin: 0;
-            overflow: hidden;
+            padding: 0;
             background: #495059;
-        }
-        .container {
-            width: 100vw;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
-            position: relative;
-            background: #495059;
+            flex-direction: column;
         }
-        img {
-            width: 683.28px;
-            height: 689.04px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .text-blurry, .text-lofi, .border-blurry, .text-resonate, 
-        .button-dance, .text-close-eyes, .date, .text-dance, 
-        .button-play, .button-pause, .button-stop, 
-        .inner-play, .inner-pause, .inner-stop {
-            position: absolute;
-            transform: rotate(-90deg);
-            transform-origin: top left;
+
+        .container {
+            text-align: center;
             color: #E4E1D8;
-            font-size: 24px;
-            font-family: 'Adobe Song Std';
-            font-weight: 300;
-            word-wrap: break-word;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        .text-blurry {
-            width: 48px;
-            left: 59.98px;
-            top: 300.89px;
+
+        img {
+            width: 80%;
+            max-width: 600px;
+            height: auto;
+            margin-bottom: 20px;
         }
-        .text-lofi {
-            width: 31px;
-            left: 29.26px;
-            top: 192.78px;
-        }
-        .border-blurry {
-            width: 34.05px;
-            height: 121.13px;
-            left: 29.34px;
-            top: 294.92px;
-            border-radius: 40px;
-            border: 1px #E4E1D8 solid;
-        }
-        .text-resonate {
-            left: 29.34px;
-            top: 260.87px;
-        }
-        .button-dance {
-            width: 34.05px;
-            height: 121.13px;
-            left: 29.34px;
-            top: 385.97px;
-            background: #D9D9D9;
-            border-radius: 40px;
-            border: 1px #E4E1D8 solid;
-        }
-        .text-close-eyes {
-            left: 29.34px;
-            top: 351.92px;
-        }
+
         .date {
-            width: 76px;
-            height: 407px;
-            left: 29.34px;
-            top: 108.87px;
             font-size: 36px;
             font-family: 'Poiret One';
             font-weight: 400;
+            margin-bottom: 20px;
         }
-        .text-dance {
-            width: 48px;
-            left: 59.98px;
-            top: 391.94px;
+
+        .text-blurry, .text-lofi, .text-resonate, .text-close-eyes, .text-dance {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .button-dance, .button-play, .button-pause, .button-stop {
+            display: inline-block;
+            background: #D9D9D9;
+            border-radius: 20px;
+            border: 1px solid #E4E1D8;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-dance:hover, .button-play:hover, .button-pause:hover, .button-stop:hover {
+            background-color: #E4E1D8;
+        }
+
+        .inner-play, .inner-pause, .inner-stop {
+            width: 25px;
+            height: 25px;
+            background: #495059;
+            margin: 0 auto;
+        }
+
+        .button-play, .button-pause, .button-stop {
+            font-size: 18px;
             color: #495059;
         }
+
+        /* New custom styling */
+        .text-blurry, .text-lofi, .text-resonate, .text-close-eyes, .text-dance {
+            writing-mode: vertical-rl;
+            text-align: center;
+        }
+
+        .button-dance {
+            width: auto;
+            height: 60px;
+            background-color: #D9D9D9;
+            border-radius: 40px;
+        }
+        
         .button-play, .button-pause, .button-stop {
-            width: 47.19px;
-            height: 75.19px;
-            background: #E4E1D8;
+            width: 80px;
+            height: 60px;
+            margin: 5px;
+            display: inline-block;
+            background-color: #E4E1D8;
             border-radius: 5px;
         }
-        .button-play {
-            left: 28.26px;
-            top: 141.69px;
-        }
-        .button-pause {
-            left: 124.36px;
-            top: 141.69px;
-        }
-        .button-stop {
-            left: 220.46px;
-            top: 141.69px;
-        }
-        .inner-play, .inner-pause, .inner-stop {
-            width: 25.68px;
-            height: 25.68px;
-            background: #495059;
-        }
-        .inner-play {
-            left: 56.77px;
-            top: 132.12px;
-        }
-        .inner-pause {
-            left: 149.78px;
-            top: 132.12px;
-        }
-        .inner-stop {
-            left: 244.56px;
-            top: 132.12px;
+
+        /* Optional - add responsive designs for mobile */
+        @media (max-width: 600px) {
+            img {
+                width: 90%;
+            }
+
+            .date {
+                font-size: 28px;
+            }
+
+            .text-blurry, .text-lofi, .text-resonate, .text-close-eyes, .text-dance {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="磁带2" alt="Cassette Image" />
-        <div class="text-blurry">Blurry</div>
-        <div class="text-lofi">Lo-fi</div>
-        <div class="border-blurry"></div>
-        <div class="text-resonate">You resonate most with...</div>
-        <div class="button-dance"></div>
-        <div class="text-close-eyes">Now close your eyes, and just...</div>
+        <img src="CassetteImage.png" alt="Cassette Image" />
         <div class="date">2025-03-25</div>
-        <div class="text-dance">Dance</div>
-        <div class="button-play"></div>
-        <div class="button-pause"></div>
-        <div class="button-stop"></div>
-        <div class="inner-play"></div>
-        <div class="inner-pause"></div>
-        <div class="inner-stop"></div>
-    </div>
 
-    <audio id="audioPlayer" src="generated_audio_20250327_171243.mp3"></audio>
+        <div class="text-lofi">Lo-fi</div>
+        <div class="text-blurry">Blurry</div>
+        <div class="text-resonate">You resonate most with...</div>
+        <div class="button-dance">Dance</div>
+        <div class="text-close-eyes">Now close your eyes, and just...</div>
+
+        <div class="button-play" onclick="playMusic()">Play</div>
+        <div class="button-pause" onclick="pauseMusic()">Pause</div>
+        <div class="button-stop" onclick="stopMusic()">Stop</div>
+
+        <audio id="audioPlayer" src="generated_audio_20250327_171243.mp3"></audio>
+    </div>
 
     <script>
         const audioPlayer = document.getElementById('audioPlayer');
 
+        // 播放音乐
         function playMusic() {
             audioPlayer.play();
         }
 
+        // 暂停音乐
         function pauseMusic() {
             audioPlayer.pause();
         }
 
+        // 停止音乐
         function stopMusic() {
             audioPlayer.pause();
-            audioPlayer.currentTime = 0;
+            audioPlayer.currentTime = 0;  // 从头开始
         }
     </script>
 </body>
