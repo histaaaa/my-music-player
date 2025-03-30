@@ -29,21 +29,19 @@
 
         /* 磁带图片，调整为更大的尺寸 */
         .icon {
-            width: 85%;  /* 放大磁带图片 */
+            width: 80%;  /* 放大磁带图片 */
             max-width: 900px;  /* 设置最大宽度 */
             height: auto;
             transform: rotate(0deg); /* 保持正确方向 */
-            position: absolute;
+            margin-bottom: 30px; /* 磁带图片和下方图片之间增加间隔 */
         }
 
         /* 文字图片 */
         .text-image {
             width: 50%; /* 比磁带小 */
-            max-width: 500px; /* 限制最大宽度 */
+            max-width: 400px; /* 限制最大宽度 */
             height: auto;
-            margin-top: 40px; /* 增加图片与按钮之间的间隔 */
-            position: relative;
-            z-index: 1; /* 确保文本图片叠加在按钮上面 */
+            margin-top: 60px; /* 增加图片与按钮之间的间隔 */
         }
 
         /* 音频控制按钮 */
@@ -51,9 +49,7 @@
             display: flex;
             justify-content: center;
             gap: 20px; /* 增加按钮间隔 */
-            margin-top: 40px; /* 增加按钮与图片之间的间距 */
-            position: relative;
-            z-index: 2; /* 确保按钮在图片上面 */
+            margin-top: 80px; /* 增加按钮与图片之间的间距 */
         }
 
         .button {
@@ -92,7 +88,7 @@
 <body>
     <div class="container">
         <!-- 第一张磁带图片 -->
-        <img src="CassetteImage.png" alt="Cassette Image" class="icon" />
+        <img src="CassetteImage(1).png" alt="Cassette Image" class="icon" />
         
         <!-- 第二张带有文本的图片 -->
         <img src="words.png" alt="Text Image" class="text-image" />
