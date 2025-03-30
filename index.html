@@ -8,29 +8,26 @@
         body {
             margin: 0;
             overflow: hidden;
+            background: #495059;
         }
         .container {
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             position: relative;
-            transform: rotate(90deg);
-            transform-origin: top left;
             background: #495059;
-            overflow: hidden;
         }
         img {
             width: 683.28px;
             height: 689.04px;
-            left: 302.60px;
-            top: 561.64px;
             position: absolute;
-            transform: rotate(-90deg);
-            transform-origin: top left;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
         }
-        .text-blurry {
-            width: 48px;
-            left: 59.98px;
-            top: 300.89px;
+        .text-blurry, .text-lofi, .border-blurry, .text-resonate, 
+        .button-dance, .text-close-eyes, .date, .text-dance, 
+        .button-play, .button-pause, .button-stop, 
+        .inner-play, .inner-pause, .inner-stop {
             position: absolute;
             transform: rotate(-90deg);
             transform-origin: top left;
@@ -40,50 +37,33 @@
             font-weight: 300;
             word-wrap: break-word;
         }
+        .text-blurry {
+            width: 48px;
+            left: 59.98px;
+            top: 300.89px;
+        }
         .text-lofi {
             width: 31px;
             left: 29.26px;
             top: 192.78px;
-            position: absolute;
-            transform: rotate(-90deg);
-            transform-origin: top left;
-            color: #E4E1D8;
-            font-size: 24px;
-            font-family: 'Kodchasan';
-            font-weight: 400;
-            word-wrap: break-word;
         }
         .border-blurry {
             width: 34.05px;
             height: 121.13px;
             left: 29.34px;
             top: 294.92px;
-            position: absolute;
-            transform: rotate(-90deg);
-            transform-origin: top left;
             border-radius: 40px;
             border: 1px #E4E1D8 solid;
         }
         .text-resonate {
             left: 29.34px;
             top: 260.87px;
-            position: absolute;
-            transform: rotate(-90deg);
-            transform-origin: top left;
-            color: #E4E1D8;
-            font-size: 24px;
-            font-family: 'Adobe Song Std';
-            font-weight: 300;
-            word-wrap: break-word;
         }
         .button-dance {
             width: 34.05px;
             height: 121.13px;
             left: 29.34px;
             top: 385.97px;
-            position: absolute;
-            transform: rotate(-90deg);
-            transform-origin: top left;
             background: #D9D9D9;
             border-radius: 40px;
             border: 1px #E4E1D8 solid;
@@ -91,48 +71,25 @@
         .text-close-eyes {
             left: 29.34px;
             top: 351.92px;
-            position: absolute;
-            transform: rotate(-90deg);
-            transform-origin: top left;
-            color: #E4E1D8;
-            font-size: 24px;
-            font-family: 'Adobe Song Std';
-            font-weight: 300;
-            word-wrap: break-word;
         }
         .date {
             width: 76px;
             height: 407px;
             left: 29.34px;
             top: 108.87px;
-            position: absolute;
-            transform: rotate(-90deg);
-            transform-origin: top left;
-            color: #E4E1D8;
             font-size: 36px;
             font-family: 'Poiret One';
             font-weight: 400;
-            word-wrap: break-word;
         }
         .text-dance {
             width: 48px;
             left: 59.98px;
             top: 391.94px;
-            position: absolute;
-            transform: rotate(-90deg);
-            transform-origin: top left;
             color: #495059;
-            font-size: 24px;
-            font-family: 'Adobe Song Std';
-            font-weight: 300;
-            word-wrap: break-word;
         }
         .button-play, .button-pause, .button-stop {
             width: 47.19px;
             height: 75.19px;
-            position: absolute;
-            transform: rotate(-90deg);
-            transform-origin: top left;
             background: #E4E1D8;
             border-radius: 5px;
         }
@@ -151,9 +108,6 @@
         .inner-play, .inner-pause, .inner-stop {
             width: 25.68px;
             height: 25.68px;
-            position: absolute;
-            transform: rotate(-90deg);
-            transform-origin: top left;
             background: #495059;
         }
         .inner-play {
@@ -172,7 +126,7 @@
 </head>
 <body>
     <div class="container">
-        <img src="磁带2.png" alt="Cassette Image" />
+        <img src="磁带2" alt="Cassette Image" />
         <div class="text-blurry">Blurry</div>
         <div class="text-lofi">Lo-fi</div>
         <div class="border-blurry"></div>
@@ -208,4 +162,4 @@
         }
     </script>
 </body>
-</html> 
+</html>
