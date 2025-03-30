@@ -6,50 +6,187 @@
     <title>音乐播放器</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #4a4f59;
-            color: #eaeaea;
-            font-family: 'Arial', sans-serif;
+            margin: 0;
+            overflow: hidden;
         }
         .container {
-            text-align: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform: rotate(90deg);
+            transform-origin: top left;
+            background: #495059;
+            overflow: hidden;
         }
-        .buttons {
-            margin: 20px 0;
+        img {
+            width: 683.28px;
+            height: 689.04px;
+            left: 302.60px;
+            top: 561.64px;
+            position: absolute;
+            transform: rotate(-90deg);
+            transform-origin: top left;
         }
-        button {
-            background-color: #eaeaea;
-            border: none;
-            padding: 10px 20px;
-            margin: 0 5px;
-            font-size: 16px;
-            cursor: pointer;
+        .text-blurry {
+            width: 48px;
+            left: 59.98px;
+            top: 300.89px;
+            position: absolute;
+            transform: rotate(-90deg);
+            transform-origin: top left;
+            color: #E4E1D8;
+            font-size: 24px;
+            font-family: 'Adobe Song Std';
+            font-weight: 300;
+            word-wrap: break-word;
+        }
+        .text-lofi {
+            width: 31px;
+            left: 29.26px;
+            top: 192.78px;
+            position: absolute;
+            transform: rotate(-90deg);
+            transform-origin: top left;
+            color: #E4E1D8;
+            font-size: 24px;
+            font-family: 'Kodchasan';
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+        .border-blurry {
+            width: 34.05px;
+            height: 121.13px;
+            left: 29.34px;
+            top: 294.92px;
+            position: absolute;
+            transform: rotate(-90deg);
+            transform-origin: top left;
+            border-radius: 40px;
+            border: 1px #E4E1D8 solid;
+        }
+        .text-resonate {
+            left: 29.34px;
+            top: 260.87px;
+            position: absolute;
+            transform: rotate(-90deg);
+            transform-origin: top left;
+            color: #E4E1D8;
+            font-size: 24px;
+            font-family: 'Adobe Song Std';
+            font-weight: 300;
+            word-wrap: break-word;
+        }
+        .button-dance {
+            width: 34.05px;
+            height: 121.13px;
+            left: 29.34px;
+            top: 385.97px;
+            position: absolute;
+            transform: rotate(-90deg);
+            transform-origin: top left;
+            background: #D9D9D9;
+            border-radius: 40px;
+            border: 1px #E4E1D8 solid;
+        }
+        .text-close-eyes {
+            left: 29.34px;
+            top: 351.92px;
+            position: absolute;
+            transform: rotate(-90deg);
+            transform-origin: top left;
+            color: #E4E1D8;
+            font-size: 24px;
+            font-family: 'Adobe Song Std';
+            font-weight: 300;
+            word-wrap: break-word;
+        }
+        .date {
+            width: 76px;
+            height: 407px;
+            left: 29.34px;
+            top: 108.87px;
+            position: absolute;
+            transform: rotate(-90deg);
+            transform-origin: top left;
+            color: #E4E1D8;
+            font-size: 36px;
+            font-family: 'Poiret One';
+            font-weight: 400;
+            word-wrap: break-word;
+        }
+        .text-dance {
+            width: 48px;
+            left: 59.98px;
+            top: 391.94px;
+            position: absolute;
+            transform: rotate(-90deg);
+            transform-origin: top left;
+            color: #495059;
+            font-size: 24px;
+            font-family: 'Adobe Song Std';
+            font-weight: 300;
+            word-wrap: break-word;
+        }
+        .button-play, .button-pause, .button-stop {
+            width: 47.19px;
+            height: 75.19px;
+            position: absolute;
+            transform: rotate(-90deg);
+            transform-origin: top left;
+            background: #E4E1D8;
             border-radius: 5px;
         }
-        .cassette {
-            width: 300px;
-            height: 150px;
-            background-image: url('iPhone 16 Pro Max - 10.png');
-            background-size: cover;
-            margin: 20px auto;
+        .button-play {
+            left: 28.26px;
+            top: 141.69px;
+        }
+        .button-pause {
+            left: 124.36px;
+            top: 141.69px;
+        }
+        .button-stop {
+            left: 220.46px;
+            top: 141.69px;
+        }
+        .inner-play, .inner-pause, .inner-stop {
+            width: 25.68px;
+            height: 25.68px;
+            position: absolute;
+            transform: rotate(-90deg);
+            transform-origin: top left;
+            background: #495059;
+        }
+        .inner-play {
+            left: 56.77px;
+            top: 132.12px;
+        }
+        .inner-pause {
+            left: 149.78px;
+            top: 132.12px;
+        }
+        .inner-stop {
+            left: 244.56px;
+            top: 132.12px;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <img src="磁带2.png" alt="Cassette Image" />
+        <div class="text-blurry">Blurry</div>
+        <div class="text-lofi">Lo-fi</div>
+        <div class="border-blurry"></div>
+        <div class="text-resonate">You resonate most with...</div>
+        <div class="button-dance"></div>
+        <div class="text-close-eyes">Now close your eyes, and just...</div>
         <div class="date">2025-03-25</div>
-        <div class="buttons">
-            <button onclick="playMusic()">▶️</button>
-            <button onclick="pauseMusic()">⏸️</button>
-            <button onclick="stopMusic()">⏹️</button>
-        </div>
-        <div class="cassette"></div>
-        <div class="genre">Lo-fi</div>
-        <div class="resonate">You resonate most with... <button>Blurry</button></div>
-        <div class="action">Now close your eyes, and just... <button>Dance</button></div>
+        <div class="text-dance">Dance</div>
+        <div class="button-play"></div>
+        <div class="button-pause"></div>
+        <div class="button-stop"></div>
+        <div class="inner-play"></div>
+        <div class="inner-pause"></div>
+        <div class="inner-stop"></div>
     </div>
 
     <audio id="audioPlayer" src="generated_audio_20250327_171243.mp3"></audio>
