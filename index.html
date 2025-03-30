@@ -20,16 +20,14 @@
         .container {
             text-align: center;
             color: #E4E1D8;
-            width: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
         }
 
         img {
             width: 80%;
-            max-width: 600px;
+            max-width: 500px; /* 确保图片适应 */
             height: auto;
             margin-bottom: 20px;
         }
@@ -41,15 +39,18 @@
             margin-bottom: 20px;
         }
 
-        .text-blurry, .text-lofi, .text-resonate, .text-close-eyes, .text-dance {
+        .text-lofi, .text-blurry, .text-resonate, .text-close-eyes, .text-dance {
             font-size: 24px;
             margin-bottom: 10px;
+            font-family: 'Adobe Song Std';
+            color: #E4E1D8;
         }
 
+        /* 按钮样式 */
         .button-dance, .button-play, .button-pause, .button-stop {
             display: inline-block;
             background: #D9D9D9;
-            border-radius: 20px;
+            border-radius: 40px;
             border: 1px solid #E4E1D8;
             padding: 15px 30px;
             margin: 10px;
@@ -58,10 +59,18 @@
             transition: background-color 0.3s ease;
         }
 
+        .button-play, .button-pause, .button-stop {
+            width: 80px;
+            height: 60px;
+            background: #E4E1D8;
+            font-size: 18px;
+        }
+
         .button-dance:hover, .button-play:hover, .button-pause:hover, .button-stop:hover {
             background-color: #E4E1D8;
         }
 
+        /* 音频控制按钮内图标 */
         .inner-play, .inner-pause, .inner-stop {
             width: 25px;
             height: 25px;
@@ -69,34 +78,7 @@
             margin: 0 auto;
         }
 
-        .button-play, .button-pause, .button-stop {
-            font-size: 18px;
-            color: #495059;
-        }
-
-        /* New custom styling */
-        .text-blurry, .text-lofi, .text-resonate, .text-close-eyes, .text-dance {
-            writing-mode: vertical-rl;
-            text-align: center;
-        }
-
-        .button-dance {
-            width: auto;
-            height: 60px;
-            background-color: #D9D9D9;
-            border-radius: 40px;
-        }
-        
-        .button-play, .button-pause, .button-stop {
-            width: 80px;
-            height: 60px;
-            margin: 5px;
-            display: inline-block;
-            background-color: #E4E1D8;
-            border-radius: 5px;
-        }
-
-        /* Optional - add responsive designs for mobile */
+        /* 响应式设计 */
         @media (max-width: 600px) {
             img {
                 width: 90%;
@@ -106,7 +88,7 @@
                 font-size: 28px;
             }
 
-            .text-blurry, .text-lofi, .text-resonate, .text-close-eyes, .text-dance {
+            .text-lofi, .text-blurry, .text-resonate, .text-close-eyes, .text-dance {
                 font-size: 20px;
             }
         }
@@ -123,10 +105,12 @@
         <div class="button-dance">Dance</div>
         <div class="text-close-eyes">Now close your eyes, and just...</div>
 
+        <!-- 音频控制按钮 -->
         <div class="button-play" onclick="playMusic()">Play</div>
         <div class="button-pause" onclick="pauseMusic()">Pause</div>
         <div class="button-stop" onclick="stopMusic()">Stop</div>
 
+        <!-- 音频播放器 -->
         <audio id="audioPlayer" src="generated_audio_20250327_171243.mp3"></audio>
     </div>
 
