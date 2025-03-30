@@ -27,34 +27,20 @@
             justify-content: center;
         }
 
-        /* 图像 */
+        /* 磁带图片 */
         .icon {
-            width: 80%;
-            max-width: 600px;
+            width: 70%;
+            max-width: 700px;
             height: auto;
-            transform: rotate(180deg); /* 或调整为 rotate(0deg) */
+            transform: rotate(180deg); /* 旋转180度 */
         }
 
-        /* 文本 */
-        .blurry, .lo-fi, .text-resonate, .text-close-eyes, .text-dance {
-            color: #E4E1D8;
-            font-size: 24px;
-            font-family: 'Adobe Song Std';
-            margin: 10px 0;
-        }
-
-        .blurry {
-            text-align: center;
-        }
-
-        .lo-fi {
-            text-align: center;
-            font-family: 'Kodchasan';
-        }
-
-        .text-resonate, .text-close-eyes, .text-dance {
-            text-align: center;
-            font-family: 'Adobe Song Std';
+        /* 文字图片 */
+        .text-image {
+            width: 50%; /* 比磁带小 */
+            max-width: 500px; /* 限制最大宽度 */
+            height: auto;
+            margin-top: 20px;
         }
 
         /* 音频控制按钮 */
@@ -100,18 +86,11 @@
 </head>
 <body>
     <div class="container">
-        <!-- 图像 -->
+        <!-- 第一张磁带图片 -->
         <img src="CassetteImage.png" alt="Cassette Image" class="icon" />
         
-        <!-- 日期 -->
-        <div class="text-resonate">2025-03-25</div>
-
-        <!-- 文本 -->
-        <div class="blurry">Blurry</div>
-        <div class="lo-fi">Lo-fi</div>
-        <div class="text-resonate">You resonate most with...</div>
-        <div class="text-close-eyes">Now close your eyes, and just...</div>
-        <div class="text-dance">Dance</div>
+        <!-- 第二张带有文本的图片 -->
+        <img src="words.png" alt="Text Image" class="text-image" />
 
         <!-- 音频控制按钮 -->
         <div class="button-container">
