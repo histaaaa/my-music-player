@@ -11,131 +11,81 @@
             background: #495059;
             font-family: 'Arial', sans-serif;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         .container {
+            position: relative;
             width: 100%;
             height: 100%;
-            position: relative;
-            transform: rotate(90deg);
-            transform-origin: top left;
-            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* Image */
+        /* 图像 */
         .icon {
-            position: absolute;
-            top: -121.64px;
-            left: -653.4px;
-            width: 689px;
-            height: 683.3px;
-            object-fit: contain;
+            width: 80%;
+            max-width: 600px;
+            height: auto;
             transform: rotate(-90deg);
         }
 
-        /* Text */
+        /* 文本 */
+        .blurry, .lo-fi, .text-resonate, .text-close-eyes, .text-dance {
+            color: #E4E1D8;
+            font-size: 24px;
+            font-family: 'Adobe Song Std';
+            margin: 10px 0;
+        }
+
         .blurry {
-            position: absolute;
-            top: 896.02px;
-            left: 252.89px;
-            display: inline-block;
-            width: 104px;
-            text-shadow: 0.3px 0 0 #fff, 0 0.3px 0 #fff, -0.3px 0 0 #fff, 0 -0.3px 0 #fff;
-            transform: rotate(-90deg);
-            transform-origin: 0 0;
+            text-align: center;
         }
 
         .lo-fi {
-            position: absolute;
-            top: 382.86px;
-            left: 168.28px;
-            font-family: Kodchasan;
             text-align: center;
-            display: inline-block;
-            width: 104px;
-            transform: rotate(-90deg);
-            transform-origin: 0 0;
+            font-family: 'Kodchasan';
         }
 
-        .you-resonate-most {
-            position: absolute;
-            top: 926.66px;
-            left: 212.87px;
-            text-shadow: 0.3px 0 0 #fff, 0 0.3px 0 #fff, -0.3px 0 0 #fff, 0 -0.3px 0 #fff;
-            transform: rotate(-90deg);
-            transform-origin: 0 0;
+        .text-resonate, .text-close-eyes, .text-dance {
+            text-align: center;
+            font-family: 'Adobe Song Std';
         }
 
-        .now-close-you {
-            position: absolute;
-            top: 926.66px;
-            left: 303.92px;
-            text-shadow: 0.3px 0 0 #fff, 0 0.3px 0 #fff, -0.3px 0 0 #fff, 0 -0.3px 0 #fff;
-            transform: rotate(-90deg);
-            transform-origin: 0 0;
+        /* 音频控制按钮 */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
         }
 
-        .div {
-            position: absolute;
-            top: 926.66px;
-            left: 32.87px;
-            font-size: 36px;
-            font-family: 'Poiret One';
-            display: inline-block;
-            width: 407px;
-            height: 76px;
-            transform: rotate(-90deg);
-            transform-origin: 0 0;
+        .button {
+            background: #E4E1D8;
+            border-radius: 5px;
+            padding: 15px 30px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
         }
 
-        .dance {
-            position: absolute;
-            top: 896.02px;
-            left: 343.94px;
-            color: #495059;
-            display: inline-block;
-            width: 104px;
-            text-shadow: 0.3px 0 0 #495059, 0 0.3px 0 #495059, -0.3px 0 0 #495059, 0 -0.3px 0 #495059;
-            transform: rotate(-90deg);
-            transform-origin: 0 0;
+        .button:hover {
+            background-color: #D9D9D9;
         }
 
-        /* Audio control buttons */
-        .iphone-16-pro-max-10-child1, .iphone-16-pro-max-10-child, .iphone-16-pro-max-10-inner {
-            position: absolute;
-            top: 927.74px;
-            left: 161.91px;
-            border-radius: 6px;
-            background-color: #d9d9d9;
-            width: 267.4px;
-            height: 5.4px;
-            transform: rotate(-90deg);
-            transform-origin: 0 0;
-        }
-
-        .icon-media-stop, .icon-media-pause, .icon-media-play {
-            position: absolute;
-            height: 2.69%;
-            width: 5.84%;
-            top: 11.13%;
-            right: 255.85%;
-            bottom: 86.18%;
-            left: -161.69%;
-            max-width: 100%;
-            overflow: hidden;
-            max-height: 100%;
-            object-fit: contain;
-            transform: rotate(-90deg);
-        }
-
-        /* Progress bar */
+        /* 进度条 */
         .progress-bar {
-            position: absolute;
-            width: 100%;
+            width: 80%;
             height: 8px;
-            top: 450px;
             background-color: #D9D9D9;
             border-radius: 5px;
+            margin-top: 20px;
+            position: relative;
         }
 
         .progress-bar-inner {
@@ -144,28 +94,37 @@
             background-color: #E4E1D8;
             border-radius: 5px;
         }
+
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- 图像 -->
         <img src="CassetteImage.png" alt="Cassette Image" class="icon" />
+        
+        <!-- 日期 -->
+        <div class="text-resonate">2025-03-25</div>
+
+        <!-- 文本 -->
         <div class="blurry">Blurry</div>
         <div class="lo-fi">Lo-fi</div>
-        <div class="you-resonate-most">You resonate most with...</div>
-        <div class="now-close-you">Now close your eyes, and just...</div>
-        <div class="div">2025-03-25</div>
-        <div class="dance">Dance</div>
+        <div class="text-resonate">You resonate most with...</div>
+        <div class="text-close-eyes">Now close your eyes, and just...</div>
+        <div class="text-dance">Dance</div>
 
-        <!-- Audio Control Buttons -->
-        <div class="iphone-16-pro-max-10-child1" onclick="playMusic()">Play</div>
-        <div class="iphone-16-pro-max-10-child" onclick="stopMusic()">Stop</div>
-        <div class="iphone-16-pro-max-10-inner" onclick="pauseMusic()">Pause</div>
+        <!-- 音频控制按钮 -->
+        <div class="button-container">
+            <div class="button" onclick="playMusic()">Play</div>
+            <div class="button" onclick="stopMusic()">Stop</div>
+            <div class="button" onclick="pauseMusic()">Pause</div>
+        </div>
 
-        <!-- Progress Bar -->
+        <!-- 进度条 -->
         <div class="progress-bar">
             <div class="progress-bar-inner" id="progressBar"></div>
         </div>
 
+        <!-- 音频播放器 -->
         <audio id="audioPlayer" src="generated_audio_20250327_171243.mp3"></audio>
     </div>
 
@@ -173,21 +132,25 @@
         const audioPlayer = document.getElementById('audioPlayer');
         const progressBar = document.getElementById('progressBar');
 
+        // 播放音乐
         function playMusic() {
             audioPlayer.play();
             updateProgressBar();
         }
 
+        // 暂停音乐
         function pauseMusic() {
             audioPlayer.pause();
         }
 
+        // 停止音乐
         function stopMusic() {
             audioPlayer.pause();
             audioPlayer.currentTime = 0;
             progressBar.style.width = '0%';  // Reset progress bar
         }
 
+        // 更新进度条
         function updateProgressBar() {
             setInterval(() => {
                 const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
