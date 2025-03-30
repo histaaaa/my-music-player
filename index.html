@@ -27,12 +27,13 @@
             justify-content: center;
         }
 
-        /* 磁带图片 */
+        /* 磁带图片，调整为更大的尺寸 */
         .icon {
-            width: 70%;
-            max-width: 700px;
+            width: 85%;  /* 放大磁带图片 */
+            max-width: 900px;  /* 设置最大宽度 */
             height: auto;
-            transform: rotate(180deg); /* 旋转180度 */
+            transform: rotate(0deg); /* 保持正确方向 */
+            position: absolute;
         }
 
         /* 文字图片 */
@@ -40,15 +41,19 @@
             width: 50%; /* 比磁带小 */
             max-width: 500px; /* 限制最大宽度 */
             height: auto;
-            margin-top: 20px;
+            margin-top: 40px; /* 增加图片与按钮之间的间隔 */
+            position: relative;
+            z-index: 1; /* 确保文本图片叠加在按钮上面 */
         }
 
         /* 音频控制按钮 */
         .button-container {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
+            gap: 20px; /* 增加按钮间隔 */
+            margin-top: 40px; /* 增加按钮与图片之间的间距 */
+            position: relative;
+            z-index: 2; /* 确保按钮在图片上面 */
         }
 
         .button {
